@@ -1,10 +1,12 @@
 /*
 
+//folders
 !/lib/
 !/assets/
 !/test/
 
-!/.gitignore
-!/README.md
-!/package.json
-!/LICENSE
+//files
+!.gitignore
+!README.md
+!package.json
+!LICENSE
