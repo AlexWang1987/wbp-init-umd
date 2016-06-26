@@ -1,11 +1,12 @@
+# exclude all
 /*
 
-//folders
+# project structure
 !/lib/
 !/assets/
 !/test/
 
-//files
+# project files
 !.gitignore
 !README.md
 !package.json
