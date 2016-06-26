@@ -1,0 +1,22 @@
+{
+  "name": "wbp-init-umd",
+  "version": "1.0.1",
+  "description": "create a UMD library project.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexWang1987/wbp-init-umd.git"
+  },
+  "author": "AlexWang <1669499355@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexWang1987/wbp-init-umd/issues"
+  },
+  "homepage": "https://github.com/AlexWang1987/wbp-init-umd#readme"
+}
