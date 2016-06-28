@@ -2,7 +2,7 @@
   "name": "wbp-init-umd",
   "version": "1.0.2",
   "description": "create a UMD library project.",
-  "main": "index.js",
+  "main": "lib/main.js",
   "directories": {
     "test": "test"
   },
@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/AlexWang1987/wbp-init-umd/issues"
   },
-  "homepage": "https://github.com/AlexWang1987/wbp-init-umd#readme"
+  "homepage": "https://github.com/AlexWang1987/wbp-init-umd#readme",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "promisify-fs": "^1.0.33",
+    "promisify-git": "^1.1.15"
+  }
 }
