@@ -22,6 +22,7 @@
   "dependencies": {
     "bluebird": "^3.4.1",
     "promisify-fs": "^1.0.33",
-    "promisify-git": "^1.1.17"
+    "promisify-git": "^1.1.17",
+    "promisify-github": "^1.0.6"
   }
 }
