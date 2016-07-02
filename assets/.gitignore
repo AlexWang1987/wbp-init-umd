@@ -2,8 +2,10 @@
 /*
 
 # project structure
-!/lib/
-!/assets/
+!/src/
+!/dist/
+!/etc/
+!/docs/
 !/test/
 
 # project files
