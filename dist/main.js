@@ -145,7 +145,7 @@ function initNpm() {
     wbp: {
       project: 'umd',
       entries: {
-        main: 'main.js'
+        main: './main.js'
       },
       source: 'src/',
       build: 'dist/',
