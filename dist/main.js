@@ -40,7 +40,6 @@ module.exports = function wbpplugin() {
                 cx.warn('Git remote [origin] may already exist.')
               })
           }
-          cx.warn('createGithubRepo got error.');
         })
     })
     .then(function () {
@@ -121,6 +120,8 @@ function createGithubRepo() {
           .catch(function (e) {
             cx.warn('You may have to deal with it manually.');
           })
+      } else {
+        cx.warn('createGithubRepo ignore.');
       }
     })
 }
