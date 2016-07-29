@@ -57,6 +57,24 @@ module.exports = function wbpplugin() {
 };
 
 /**
+ * @method startDevUMDProject
+ * @return {promise}
+ */
+function startDevUMDProject() {
+  return form([{
+      message: 'Do you want to develop and debug newly-born UMD project?',
+      type: 'confirm',
+      name: 'comfirm',
+      default: true
+    }])
+    .then(function (formAnswers) {
+      if (formAnswers.comfirm) {
+        return cx.call('dev');
+      }
+    })
+}
+
+/**
  * getProjectInfo
  * @return promise
  */
