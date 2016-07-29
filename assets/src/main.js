@@ -1,5 +1,5 @@
 // ENTRY MODULE / MAIN FILE/ MAIN MODULE
-module.exports = function exports() {
+module.exports = function main() {
 
 };
 

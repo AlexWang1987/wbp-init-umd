@@ -3,7 +3,6 @@
 
 # project structure
 !/src/
-!/dist/
 !/etc/
 !/docs/
 !/test/
@@ -13,3 +12,4 @@
 !README.md
 !package.json
 !LICENSE
+!webpack.config.umd.js
