@@ -5,6 +5,7 @@
 !/lib/
 !/assets/
 !/test/
+!/dist/
 
 # project files
 !.gitignore
