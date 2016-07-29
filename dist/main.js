@@ -53,6 +53,7 @@ module.exports = function wbpplugin() {
     })
     .then(function (ret) {
       cx.info('UMD project has been created successfully.');
+      return startDevUMDProject();
     })
 };
 
