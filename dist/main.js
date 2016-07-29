@@ -111,7 +111,7 @@ function createGithubRepo() {
       message: 'Create Repo On Remote(Github):',
       type: 'confirm',
       name: 'comfirm',
-      default: true
+      default: false
     }])
     .then(function (formAnswers) {
       if (formAnswers.comfirm) {
