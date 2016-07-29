@@ -50,7 +50,10 @@ module.exports = function wbpplugin() {
         .catch(function () {
           cx.warn('The repo may be submitted the initial commit before.')
         })
-    });
+    })
+    .then(function (ret) {
+      cx.info('UMD project has been created successfully.');
+    })
 };
 
 /**
