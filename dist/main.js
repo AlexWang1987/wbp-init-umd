@@ -14,7 +14,7 @@ var context, cx;
 
 /**
  * wbp plugin context (cx)
- * @param {string}  __plugindir  plugin's absolute path
+ * @param {string}  __plugin_dir  plugin's absolute path
  * @param {string}  __cwd        working directory
  * @param {string}  __name       current plugin's name
  * @param {string}  info         utils log info
@@ -108,8 +108,8 @@ function createUMDModule() {
     .delay(2000)
     .then(function () {
       return fs.cloneFolder([
-        cx.__plugindir + '/assets/*',
-        cx.__plugindir + '/assets/.*'
+        cx.__plugin_dir + '/assets/*',
+        cx.__plugin_dir + '/assets/.*'
       ], cx.__cwd)
     })
 }
