@@ -158,7 +158,7 @@ function initNpm() {
     description: projectInfo.description,
     author: process.env['USER'] || '',
     main: 'dist/main.js',
-    version: '0.0.0',
+    version: '1.0.0',
     scripts: {
       "test": "test/index.js"
     },
