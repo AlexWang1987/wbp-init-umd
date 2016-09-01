@@ -1,12 +1,14 @@
 module.exports = function (umdConf) {
-  // enableHotReload
-  umdConf.enableHotReplacement('main');
+  umdConf.devServer.host = '0.0.0.0';
+  umdConf.webpackFeatures.enableEntryHTML();
 
-  // addExternal
-
-  // all dependencies are added as venders default
-  // umdConf.addVendor(Object.keys(umdConf.pkg.dependencies).map(function (depen_name) {
-  //   return require.resolve(depen_name);
-  // }));
+  if (umdConf.devMode) {
+    umdConf.webpackFeatures.enableEntryHot();
+    umdConf.output.publicPath = '';
+  } else {
+    umdConf.webpackFeatures.enableUglifyJs({
+      comments: false
+    });
+  }
 };
 
