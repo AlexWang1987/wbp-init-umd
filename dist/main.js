@@ -36,6 +36,9 @@ module.exports = function wbpplugin() {
         .then(function (github_repo_path) {
           if (github_repo_path) {
             return git('remote add origin ' + github_repo_path)
+              .then(function () {
+                return git('push --set-upstream origin master')
+              })
               .catch(function () {
                 cx.warn('Git remote [origin] may already exist.')
               })
