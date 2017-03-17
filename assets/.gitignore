@@ -4,7 +4,7 @@
 # project structure
 !/src/
 !/etc/
-!/docs/
+!/doc/
 !/test/
 !/dist/
 
