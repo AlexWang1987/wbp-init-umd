@@ -1,6 +1,6 @@
 {
   "name": "wbp-init-umd",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "create a UMD library project.",
   "main": "dist/main.js",
   "directories": {
