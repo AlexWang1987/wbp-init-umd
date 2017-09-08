@@ -8,13 +8,16 @@
 //  Author: AlexWang
 //  Date: 2017-03-17 11:13:14
 //  QQ Email: 1669499355@qq.com
-//  Last Modified time: 2017-03-17 11:13:36
+//  Last Modified time: 2017-09-08 11:18:22
 //  Description: wbp-init-umd-main
 //
 // //////////////////////////////////////////////////////////////////////////////
 
-// only for hot reload
-if (module && module.hot) {
-  module.hot.accept();
-}
+(async function main() {
+  try {
+    console.log('HAPPY CODING YEAH!');
 
+  } catch (e) {
+    console.error('MAIN ERROR->', e);
+  }
+}());

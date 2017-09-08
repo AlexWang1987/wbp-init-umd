@@ -8,13 +8,9 @@
 //  Author: AlexWang
 //  Date: 2017-03-17 11:13:11
 //  QQ Email: 1669499355@qq.com
-//  Last Modified time: 2017-03-17 11:13:45
+//  Last Modified time: 2017-09-08 10:45:04
 //  Description: wbp-init-umd-test
 //
 // //////////////////////////////////////////////////////////////////////////////
 
-// only for hot reload
-if (module && module.hot) {
-  module.hot.accept();
-}
-
+console.log('HAPPY TESTING!');

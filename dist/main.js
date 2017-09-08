@@ -25,36 +25,36 @@ var context, cx;
 module.exports = function wbpplugin() {
   context = cx = this;
   return createUMDModule()
-    .then(function () {
+    .then(function() {
       return getProjectInfo();
     })
-    .then(function () {
+    .then(function() {
       return initGitRepo();
     })
-    .then(function () {
+    .then(function() {
       return createGithubRepo()
-        .then(function (github_repo_path) {
+        .then(function(github_repo_path) {
           if (github_repo_path) {
             return git('remote add origin ' + github_repo_path)
-              .then(function () {
+              .then(function() {
                 return git('push --set-upstream origin master')
               })
-              .catch(function () {
+              .catch(function() {
                 cx.warn('Git remote [origin] may already exist.')
               })
           }
         })
     })
-    .then(function () {
+    .then(function() {
       return initNpm();
     })
-    .then(function () {
+    .then(function() {
       return submitInitialCommit()
-        .catch(function () {
+        .catch(function() {
           cx.warn('The repo may be submitted the initial commit before.')
         })
     })
-    .then(function (ret) {
+    .then(function(ret) {
       cx.info('UMD project has been created successfully.');
       return startDevUMDProject();
     })
@@ -71,7 +71,7 @@ function startDevUMDProject() {
       name: 'comfirm',
       default: true
     }])
-    .then(function (formAnswers) {
+    .then(function(formAnswers) {
       if (formAnswers.comfirm) {
         return cx.call('dev');
       }
@@ -97,7 +97,7 @@ function getProjectInfo() {
       name: 'description',
       default: 'A UMD Web Module.'
     }])
-    .then(function (formAnswers) {
+    .then(function(formAnswers) {
       return projectInfo = formAnswers;
     })
 }
@@ -109,7 +109,7 @@ function getProjectInfo() {
 function createUMDModule() {
   return Promise
     .delay(2000)
-    .then(function () {
+    .then(function() {
       return fs.cloneFolder([
         cx.__plugin_dir + '/assets/*',
         cx.__plugin_dir + '/assets/.*'
@@ -138,11 +138,11 @@ function createGithubRepo() {
       name: 'comfirm',
       default: false
     }])
-    .then(function (formAnswers) {
+    .then(function(formAnswers) {
       if (formAnswers.comfirm) {
         return github
           .newRepo(projectInfo.name, projectInfo.description)
-          .catch(function (e) {
+          .catch(function(e) {
             cx.warn('You may have to deal with it manually.');
           })
       } else {
@@ -160,7 +160,7 @@ function initNpm() {
     name: projectInfo.name,
     description: projectInfo.description,
     author: process.env['USER'] || '',
-    main: 'dist/main.js',
+    main: 'dist/index.js',
     version: '1.0.0',
     scripts: {
       "test": "test/index.js"
@@ -170,8 +170,7 @@ function initNpm() {
     wbp: {
       project: 'umd',
       entries: {
-        "main": "./src/main.js",
-        "test": "./test/test.js"
+        "index": "./src/index.js"
       },
       source: 'src/',
       build: 'dist/',
@@ -187,11 +186,10 @@ function initNpm() {
  */
 function submitInitialCommit() {
   return git('add .')
-    .then(function () {
+    .then(function() {
       return git('commit -m "Commit Initial - UMD"')
     })
-    .catch(function (e) {
+    .catch(function(e) {
       cx.warn('submitInitialCommit got error');
     })
 }
-

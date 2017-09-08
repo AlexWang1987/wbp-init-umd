@@ -1,17 +1,14 @@
-module.exports = function (umdConf) {
-  umdConf.devServer.host = '0.0.0.0';
-  umdConf.output.publicPath = '';
+module.exports = function(umdConf) {
+  // node
+  // umdConf.webpackFeatures.enableNode();
+  umdConf.webpackFeatures.enableClean();
+  umdConf.webpackFeatures.enableHits();
 
-  umdConf.webpackFeatures.enableEntryHTML();
-  umdConf.webpackFeatures.enableEntryHTML('test');
+  // umdConf.webpackFeatures.enableVendors();
+  // umdConf.addVendor('react');
+  // umdConf.addVendor('react-dom');
 
-  if (umdConf.devMode) {
-    umdConf.webpackFeatures.enableEntryHot('main');
-    umdConf.webpackFeatures.enableEntryHot('test');
-  } else {
-    umdConf.webpackFeatures.enableUglifyJs({
-      comments: false
-    });
-  }
+  // umdConf.addParseInclude(require.resolve('react'))
+  // umdConf.addParseInclude(require.resolve('react-dom'))
+  // umdConf.addParseInclude(require.resolve('antd'))
 };
-
