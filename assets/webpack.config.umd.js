@@ -1,6 +1,7 @@
 module.exports = function(umdConf) {
-  // node
-  // umdConf.webpackFeatures.enableNode();
+  umdConf.webpackFeatures.enableEntryHTML = true;
+  umdConf.webpackFeatures.enableLESSModule = { modules: true, url: false };
+
   umdConf.webpackFeatures.enableClean();
   umdConf.webpackFeatures.enableHits();
 
@@ -8,7 +9,9 @@ module.exports = function(umdConf) {
   // umdConf.addVendor('react');
   // umdConf.addVendor('react-dom');
 
-  // umdConf.addParseInclude(require.resolve('react'))
-  // umdConf.addParseInclude(require.resolve('react-dom'))
-  // umdConf.addParseInclude(require.resolve('antd'))
+  // umdConf.addModuleAlias('react', 'preact-compat');
+  // umdConf.addModuleAlias('react-dom', 'preact-compat');
+
+  // umdConf.webpackFeatures.enableNode();
+  // umdConf.addExternalRequire('electron');
 };

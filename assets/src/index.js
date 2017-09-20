@@ -8,10 +8,11 @@
 //  Author: AlexWang
 //  Date: 2017-03-17 11:13:14
 //  QQ Email: 1669499355@qq.com
-//  Last Modified time: 2017-09-08 11:18:22
+//  Last Modified time: 2017-09-20 11:36:39
 //  Description: wbp-init-umd-main
 //
 // //////////////////////////////////////////////////////////////////////////////
+if (WBP_DEV && module.hot) { module.hot.accept(); }
 
 (async function main() {
   try {
